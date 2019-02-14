@@ -1,0 +1,16 @@
+#az adott link megnyitása
+1|open_link|http://www.netboard.hu
+#***(esetleg még ide jöhet egy paraméter, h mi történjen, ha nem létezik. Megszakítás vagy mehet tovább?
+2|text_check|Technikai támogatás
+#a user name kitöltése
+3|set_editbox|/html/body/table[4]/tbody/tr/td[1]/input[1]|Szexmester|*THREAD*
+#a password kitöltése
+4|set_editbox|/html/body/table[4]/tbody/tr/td[1]/input[2]|SzexMester
+5|text_check|Szexmester|*THREAD*
+#Az "Eltárol" checkbox bekapcsolása (ha true, akkor be, ha false, akkor kikapcsolás
+6|set_checkbox|/html/body/table[4]/tbody/tr/td[1]/input[3]|True
+#az OK gomb lenyomása
+7|button_click|/html/body/table[4]/tbody/tr/td[1]/input[4]
+#megvárjuk| hogy a gomb lenyomására betöltsön az új ablak
+8|wait|2
+9|text_check|valami hülye szöveg|¤¤EMS¤¤:A "valami hülye szöveg" nem található ezen az oldalon, ami a netboard.hu belépöje
